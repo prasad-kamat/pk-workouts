@@ -4,8 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        surface: '#1A1A1A',
-        bg:      '#0F0F0F',
+        bg:      '#080C14',   // deep navy-black
+        surface: '#111827',   // dark blue-grey (was pure #1A1A1A)
+        card:    '#1A2235',   // slightly lighter blue-grey for cards
+        border:  '#1E2D45',   // subtle blue border
+        accent:  '#3B82F6',   // primary blue
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
