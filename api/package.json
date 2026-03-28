@@ -2,15 +2,14 @@
   "name": "workout-app-backend",
   "version": "1.0.0",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "seed": "ts-node src/db/seed.ts",
-    "verify-api": "ts-node scripts/verify-musclewiki.ts",
-    "manage-users": "ts-node scripts/manage-users.ts",
-    "verify-urls": "ts-node scripts/verify-urls.ts",
-    "match-exercises": "ts-node scripts/match-exercises.ts",
-    "setup-yuhonas": "ts-node scripts/setup-yuhonas.ts"
+    "dev":              "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build":            "tsc",
+    "start":            "node dist/index.js",
+    "seed":             "ts-node src/db/seed.ts",
+    "exercises:sync":   "ts-node scripts/manage-exercises.ts sync",
+    "exercises:add":    "ts-node scripts/manage-exercises.ts add",
+    "exercises:remove": "ts-node scripts/manage-exercises.ts remove",
+    "exercises:list":   "ts-node scripts/manage-exercises.ts list"
   },
   "dependencies": {
     "better-sqlite3": "^9.4.3",
