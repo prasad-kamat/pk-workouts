@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/prasad1337/repositories/pk-workouts
+    - cd $DEPLOYPATH/client && npm install --legacy-peer-deps && npm run build
+    - cd $DEPLOYPATH/api && npm install
+    - cd $DEPLOYPATH/api && npm run build

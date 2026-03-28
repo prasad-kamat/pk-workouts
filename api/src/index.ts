@@ -27,6 +27,15 @@ app.get('/api/health', (_, res) =>
   res.json({ status: 'ok', ts: new Date().toISOString() })
 );
 
+// Serve React client in production
+if (process.env.NODE_ENV === 'production') {
+  const clientDist = path.join(__dirname, '../../client/dist');
+  app.use(express.static(clientDist));
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(clientDist, 'index.html'));
+  });
+}
+
 app.listen(PORT, () =>
   console.log(`🏋️  Workout API → http://localhost:${PORT}`)
 );
